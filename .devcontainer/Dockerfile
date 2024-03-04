@@ -17,7 +17,7 @@ WORKDIR /workspace
 
 RUN apt-get update \
     && apt-get -y install curl git \
-    && npm install --global global npm \
-    && npm install express
+    && npm install -g npm \
+    && npm install -g express express-generator
 
 USER node
