@@ -16,10 +16,6 @@ FROM node:21.6-bookworm-slim
 RUN apt-get update \
     && apt-get -y install curl git \
     && npm install --global global npm \
-    # Yo Code - Extension and Customization Generator
-    # (https://www.npmjs.com/package/generator-code)
-    && npm install --global yo generator-code
-    # figlet
-    # (https://www.npmjs.com/package/figlet)
-    # && npm install --global figlet
+    && npm install express
+
 USER node
