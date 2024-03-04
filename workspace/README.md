@@ -1,6 +1,6 @@
-# Name
+# Publish to GitHub Packages and GitHub Container Registry
 
-Overview
+GitHub Packages let you securely publish and consume packages, store your packages alongside your code, and share your packages privately with your team or publicly with the open-source community. You can also use GitHub Actions to automate your packages.
 
 ## Description
 
