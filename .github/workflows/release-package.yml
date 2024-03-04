@@ -6,7 +6,7 @@ on:
 
 defaults:
   run:
-    working-directory: workspace/nodeapp
+    working-directory: ./workspace/nodeapp
 
 jobs:
   build:
