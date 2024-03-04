@@ -42,8 +42,8 @@ jobs:
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
-    # env:
-    #   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: read
       packages: write
@@ -53,7 +53,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-          scope: shinyay
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > .npmrc
+          scope: "@NAMESPACE"
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
       # - run: npm ci
       - run: npm publish
