@@ -43,7 +43,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env:
-      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NODE_AUTH_TOKEN: ${{ secrets.personal-11-o }}
     permissions:
       contents: read
       packages: write
@@ -54,6 +54,6 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
           scope: 'shinyay'
-      # - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+      # - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.personal-11-o }}" > ~/.npmrc
       # - run: npm ci
       - run: npm publish
